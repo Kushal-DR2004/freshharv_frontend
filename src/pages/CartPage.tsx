@@ -37,7 +37,7 @@ const CartPage = () => {
     event.preventDefault();
     const product = productList.join(",");
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
 
       if (!token) {
         navigate("/login");
@@ -77,7 +77,7 @@ const CartPage = () => {
   const applyDiscountCode = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
 
       if (!token) {
         navigate("/login");
@@ -122,7 +122,7 @@ const CartPage = () => {
 
   const fetchCart = async () => {
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
 
       if (!token) {
         navigate("/login");

@@ -42,7 +42,7 @@ const Login = () => {
       setErrors({});
       setFormData({ username: "", password: "" });
       const token = response.data.access;
-      localStorage.setItem("token", token);
+      sessionStorage.setItem("token", token);
       navigate("/products");
     } catch (error: any) {
       if (error.response && error.response.data) {

@@ -77,7 +77,7 @@ const ProductInformation = () => {
   //handle the reviews
   const handleaddreview = async () => {
     if (rating > 0 && userreview != "") {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
       try {
         const response = await axios.post(
           "http://127.0.0.1:8000/api/v1/products/reviews/",
@@ -109,7 +109,7 @@ const ProductInformation = () => {
   const handleCart = async () => {
     handleFocus();
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
 
       console.log(product?.id);
 
@@ -152,7 +152,7 @@ const ProductInformation = () => {
   //fetching the individual products
   const fetchProducts = async () => {
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
 
       const url = `http://127.0.0.1:8000/api/v1/products/productitems/${num.id}/`;
 

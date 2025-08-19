@@ -53,7 +53,7 @@ const Signup = () => {
       setFormData({ username: "", email: "", password: "", location: "" });
       setUsername(response.data.username);
       const token = response.data.access;
-      localStorage.setItem("token", token);
+      sessionStorage.setItem("token", token);
       navigate("/registered");
     } catch (error: any) {
       if (error.response && error.response.data) {

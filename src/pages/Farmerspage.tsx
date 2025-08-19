@@ -23,7 +23,7 @@ const Farmerspage = () => {
   //fetch the farmer products
   const fetchfarmers = async () => {
     try {
-      const token = localStorage.getItem("token");
+      const token = sessionStorage.getItem("token");
 
       if (!token) {
         navigate("/login");
