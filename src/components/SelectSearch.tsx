@@ -1,9 +1,8 @@
-
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import type { SelectChangeEvent } from '@mui/material/Select';
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import type { SelectChangeEvent } from "@mui/material/Select";
 
 interface SelectSearchProps {
   name: string;
@@ -12,9 +11,14 @@ interface SelectSearchProps {
   value: string;
 }
 
-const SelectSearch = ({ name, handleSelect, options = [], value }: SelectSearchProps) => {
+const SelectSearch = ({
+  name,
+  handleSelect,
+  options = [],
+  value,
+}: SelectSearchProps) => {
   return (
-    <FormControl sx={{ minWidth: 150, width: 'fit-content' }} size="small">
+    <FormControl sx={{ minWidth: 150, width: "fit-content" }} size="small">
       <InputLabel id={`${name}-label`}>{name}</InputLabel>
       <Select
         labelId={`${name}-label`}
