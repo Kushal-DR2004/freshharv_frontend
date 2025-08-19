@@ -314,7 +314,7 @@ const ProductInformation = () => {
         </div>
         <section>
             <div className="p-4 flex flex-col gap-8">
-                {reviews?.map((review) => <CustemerReviews review = {review} fetchProducts={fetchProducts}/> )}
+                {reviews?.map((review) => <CustemerReviews key={review.id} review = {review} fetchProducts={fetchProducts}/> )}
             </div>
             
         </section>

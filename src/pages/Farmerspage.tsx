@@ -65,7 +65,7 @@ const [farmers , setFarmers] = useState<farmer[]>();
     <div className='mt-3'>
         <h2 className='text-center text-2xl font-bold text-[#121712] p-4'>Our farmers</h2>
     <div className='grid grid-cols-2 ml-30 mt-5 gap-3'>
-        {farmers?.map((farmer) => (<FarmerComponent id={farmer.id} about={farmer.about} farmer_name={farmer.farmer_name} ph_no={farmer.ph_no} farm={farmer?.farm}/>))}
+        {farmers?.map((farmer) => (<FarmerComponent key = {farmer.id} id={farmer.id} about={farmer.about} farmer_name={farmer.farmer_name} ph_no={farmer.ph_no} farm={farmer?.farm}/>))}
     </div>
     </div>
   )
